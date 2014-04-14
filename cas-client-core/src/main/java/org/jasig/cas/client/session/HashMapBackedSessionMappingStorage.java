@@ -82,4 +82,9 @@ public final class HashMapBackedSessionMappingStorage implements SessionMappingS
 
         return session;
 	}
+	
+	public void refreshBySessionById(String sessionId) {
+		// Do nothing : this store implementation do not use expiry policy.
+	}
+
 }

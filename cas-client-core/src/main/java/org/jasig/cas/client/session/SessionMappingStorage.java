@@ -51,5 +51,11 @@ public interface SessionMappingStorage {
 	 * @param session the HttpSession.
 	 */
 	void addSessionById(String mappingId, HttpSession session);
+	
+	/**
+	 * Refresh a session key by it's session id. Needed when backed store use cache TTL expiracy
+	 * @param sessionId the id of the session.
+	 */
+	void refreshBySessionById(String sessionId);
 
 }

@@ -155,6 +155,12 @@ public final class SingleSignOutHandler {
             }
         }
     }
+	
+	public void refreshSession(final HttpServletRequest request) {
+        final HttpSession session = request.getSession(true);
+
+        this.sessionMappingStorage.refreshBySessionById(session.getId());
+	}
 
     private boolean isMultipartRequest(final HttpServletRequest request) {
         return request.getContentType() != null && request.getContentType().toLowerCase().startsWith("multipart");
