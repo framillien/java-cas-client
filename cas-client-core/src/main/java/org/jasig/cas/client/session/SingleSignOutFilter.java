@@ -70,7 +70,7 @@ public final class SingleSignOutFilter extends AbstractConfigurationFilter {
             // Do not continue up filter chain
             return;
         } else {
-			handler.refreshSession(request);
+            handler.refreshSession(request);
             log.trace("Ignoring URI " + request.getRequestURI());
         }
 
